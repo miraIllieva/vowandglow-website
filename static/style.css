@@ -253,4 +253,64 @@ button:hover {
     text-align: center;
   }
 }
+/* Modern form design */
+.form-wrapper {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields */
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e91e63;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d81559;
+}
+
+/* Mobile styling */
+@media only screen and (max-width: 600px) {
+  .form-wrapper {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  input, select, textarea, button {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 120px;
+  }
+}
+
 
