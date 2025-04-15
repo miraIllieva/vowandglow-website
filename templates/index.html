@@ -2,8 +2,12 @@
 <html>
 <head>
     <title>Vow and Glow Beauty</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -11,14 +15,13 @@
     <!-- Sidebar Section -->
     <div class="sidebar">
         <h2>Vow & Glow</h2>
-     <!-- Sidebar nav temporarily hidden -->
-<!--
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/book">Book Now</a></li>
-</ul>
--->
-
+        <!-- Sidebar nav temporarily hidden -->
+        <!--
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/book">Book Now</a></li>
+        </ul>
+        -->
     </div>
 
     <!-- Main Content Section -->
@@ -33,15 +36,30 @@
         <h2>Our Work</h2>
 
         <div class="gallery">
-            <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
-            <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
-            <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
-            <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
-            <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
-            <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
+            <a href="{{ url_for('static', filename='images/hair1.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
+            </a>
+            <a href="{{ url_for('static', filename='images/hair2.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
+            </a>
+            <a href="{{ url_for('static', filename='images/hair3.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
+            </a>
+            <a href="{{ url_for('static', filename='images/hair4.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
+            </a>
+            <a href="{{ url_for('static', filename='images/hair5.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
+            </a>
+            <a href="{{ url_for('static', filename='images/hair6.jpg') }}" data-lightbox="gallery">
+                <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
+            </a>
         </div>
     </div>
 </div>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 </body>
 </html>
