@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Now</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Booking Request</h1>
+
+    <form method="POST" action="/book">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" placeholder="Email Address" required><br><br>
+
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="Hair">Hair</option>
+            <option value="Makeup">Makeup</option>
+            <option value="Hair & Makeup">Hair & Makeup</option>
+        </select><br><br>
+
+        <input type="number" name="people" placeholder="Number of People" required><br><br>
+        <input type="date" name="date" required><br><br>
+
+        <textarea name="message" placeholder="Tell us more..." rows="4" cols="40"></textarea><br><br>
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>

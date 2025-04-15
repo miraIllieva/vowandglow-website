@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/thankyou-bg.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 100px 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffebf2;
+        }
+        p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Your Booking!</h1>
+    <p>
+        We're so excited to glam you up for your special day! 💍
+        We'll contact you shortly to confirm all the details.
+    </p>
+</body>
+</html>

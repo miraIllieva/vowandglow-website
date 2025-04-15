@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vow and Glow Beauty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Vow and Glow Beauty</h1>
+    <p>Book your bridal hairstyle and makeup with us!</p>
+
+    <a href="/book">
+        <button class="book-button">Book Now</button>
+    </a>
+
+    <h2>Our Work</h2>
+
+    <div class="gallery">
+        <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
+        <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
+        <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
+        <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
+        <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
+        <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
+    </div>
+</body>
+</html>
