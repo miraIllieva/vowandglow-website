@@ -7,8 +7,8 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <!-- Lightbox2 CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <!-- GLightbox CSS (better than Lightbox2 for mobile) -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -37,30 +37,35 @@
         <h2>Our Work</h2>
 
         <div class="gallery">
-            <a href="{{ url_for('static', filename='images/hair1.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 1">
+            <a href="{{ url_for('static', filename='images/hair1.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
             </a>
-            <a href="{{ url_for('static', filename='images/hair2.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 2">
+            <a href="{{ url_for('static', filename='images/hair2.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
             </a>
-            <a href="{{ url_for('static', filename='images/hair3.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 3">
+            <a href="{{ url_for('static', filename='images/hair3.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
             </a>
-            <a href="{{ url_for('static', filename='images/hair4.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 4">
+            <a href="{{ url_for('static', filename='images/hair4.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
             </a>
-            <a href="{{ url_for('static', filename='images/hair5.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 5">
+            <a href="{{ url_for('static', filename='images/hair5.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
             </a>
-            <a href="{{ url_for('static', filename='images/hair6.jpg') }}" data-lightbox="vow-gallery" data-title="Hairstyle 6">
+            <a href="{{ url_for('static', filename='images/hair6.jpg') }}" class="glightbox" data-gallery="vow-gallery">
                 <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
             </a>
         </div>
     </div>
 </div>
 
-<!-- Lightbox2 JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+</script>
 
 </body>
 </html>
