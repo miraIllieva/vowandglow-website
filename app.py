@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -7,8 +9,10 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'vowandglowbeauty@gmail.com'
-app.config['MAIL_PASSWORD'] = 'zdsh fpwy tdjc clgc'  # your 16-digit Gmail app password
+load_dotenv()
+
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')  # your 16-digit Gmail app password
 
 mail = Mail(app)
 
@@ -53,6 +57,15 @@ def book():
 
 
     return render_template('book.html')
+
+@app.route("/who-we-are")
+def who_we_are():
+    return render_template("who_we_are.html")
+
+@app.route("/price-list")
+def price_list():
+    return render_template("price_list.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

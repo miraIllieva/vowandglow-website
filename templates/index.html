@@ -3,24 +3,43 @@
 <head>
     <title>Vow and Glow Beauty</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Welcome to Vow and Glow Beauty</h1>
-    <p>Book your bridal hairstyle and makeup with us!</p>
 
-    <a href="/book">
-        <button class="book-button">Book Now</button>
-    </a>
-
-    <h2>Our Work</h2>
-
-    <div class="gallery">
-        <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
-        <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
-        <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
-        <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
-        <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
-        <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
+<div class="page-layout">
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h2>Vow & Glow</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/who-we-are">Who We Are</a></li>
+            <li><a href="/price-list">Price List</a></li>
+            <li><a href="/book">Book Now</a></li>
+        </ul>
     </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h1>Welcome to Vow and Glow Beauty</h1>
+        <p>Book your bridal hairstyle and makeup with us!</p>
+
+        <a href="/book">
+            <button class="book-button">Book Now</button>
+        </a>
+
+        <h2>Our Work</h2>
+
+        <div class="gallery">
+            <img src="{{ url_for('static', filename='images/hair1.jpg') }}">
+            <img src="{{ url_for('static', filename='images/hair2.jpg') }}">
+            <img src="{{ url_for('static', filename='images/hair3.jpg') }}">
+            <img src="{{ url_for('static', filename='images/hair4.jpg') }}">
+            <img src="{{ url_for('static', filename='images/hair5.jpg') }}">
+            <img src="{{ url_for('static', filename='images/hair6.jpg') }}">
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
